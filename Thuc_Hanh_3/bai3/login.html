@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>untitlted</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: rgb(33, 163, 163);
+        }
+        .wrapper{
+            border-radius: 10px;
+            width: 420px;
+            background: mediumturquoise;
+            color: white;
+            padding: 30px 40px;
+        }
+        .wrapper h1{
+            font-size: 36px;
+            text-align: center;
+        }
+        .wrapper .input-box{
+            width: 100%;
+            height: 50px;
+            margin: 10px 0;
+        }
+        .input-box input{
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: none;
+            outline: none;
+            border: 2px solid white;
+            border-radius: 40px;
+            font-size: 16px;
+            color: aliceblue;
+            padding: 20px;
+        }
+        .input-box input::placeholder{
+            color: aliceblue;
+        }
+        .wrapper .btn{
+            width: 100%;
+            height: 45px;
+            background: white;
+            border: none;
+            border-radius: 40px;
+            font-size: 20px;
+            color:gray;
+            cursor: pointer;
+
+        }
+
+
+    </style>
+</head>
+<body>
+        <div class="wrapper">
+            <form action="">
+                <h1>Login</h1>
+                <div class="input-box">
+                    <input type="text" id="tk" placeholder="Username" required>
+                </div>
+
+                <div class="input-box">
+                    <input type="text" id="mk" placeholder="Password" required>
+                </div>
+                <button class="btn" type="submit" onclick="login()">Login
+                </button>
+
+
+            </form>
+        </div>
+
+        <script>
+            function login(){
+                var tk = document.getElementById("tk").value;
+                var mk = document.getElementById("mk").value;
+                if (tk =="admin" && mk =="admin"){
+                    window.open("admin.html")
+                }
+                else{
+                    alert("Wrong")
+                }
+            }
+        </script>
+</body>
+</html>
